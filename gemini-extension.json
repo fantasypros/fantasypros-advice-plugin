@@ -1,0 +1,13 @@
+{
+  "name": "fantasypros",
+  "version": "0.2.0",
+  "description": "FantasyPros fantasy football data and in-season workflows: start/sit, waivers, trades, player comparisons, and injury checks.",
+  "mcpServers": {
+    "fantasypros": {
+      "httpUrl": "https://api.fantasypros.com/mcp",
+      "oauth": {
+        "enabled": true
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "fantasypros",
+  "interface": {
+    "displayName": "FantasyPros"
+  },
+  "plugins": [
+    {
+      "name": "fantasypros",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Sports"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "fantasypros",
+  "owner": {
+    "name": "FantasyPros",
+    "url": "https://www.fantasypros.com/"
+  },
+  "metadata": {
+    "description": "The FantasyPros plugin: fantasy football data and in-season workflows from FantasyPros."
+  },
+  "plugins": [
+    {
+      "name": "fantasypros",
+      "source": "./",
+      "description": "FantasyPros fantasy football data and in-season workflows: start/sit, waivers, trades, player comparisons, and injury checks."
+    }
+  ]
+}

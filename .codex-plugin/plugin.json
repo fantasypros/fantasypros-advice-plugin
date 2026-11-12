@@ -1,0 +1,28 @@
+{
+  "name": "fantasypros",
+  "version": "0.2.0",
+  "description": "FantasyPros fantasy football data and in-season workflows: start/sit, waivers, trades, player comparisons, and injury checks.",
+  "author": {
+    "name": "FantasyPros",
+    "url": "https://www.fantasypros.com/"
+  },
+  "homepage": "https://www.fantasypros.com/",
+  "repository": "https://github.com/fantasypros/fantasypros-ai-plugin",
+  "keywords": ["fantasy football", "nfl", "start sit", "waivers", "trades", "rankings"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "FantasyPros",
+    "shortDescription": "Fantasy football advice from FantasyPros data",
+    "longDescription": "Set your lineup, work the waiver wire, find fair trades, compare players, and check injuries using FantasyPros expert consensus rankings, projections, and your synced leagues. Answers are grounded in current FantasyPros data, with dated sources whenever outside news is needed.",
+    "developerName": "FantasyPros",
+    "category": "Sports",
+    "capabilities": [],
+    "websiteURL": "https://www.fantasypros.com/",
+    "defaultPrompt": [
+      "Who should I start at FLEX this week?",
+      "Best waiver pickups for my team this week",
+      "Find me a trade to upgrade at RB"
+    ]
+  }
+}
