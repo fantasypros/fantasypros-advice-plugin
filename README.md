@@ -25,7 +25,7 @@ directly.
 
 ```
 /plugin marketplace add fantasypros/fantasypros-ai-plugin
-/plugin install fantasypros@fantasypros
+/plugin install fantasypros@fantasypros-ai-plugin
 ```
 
 Run `/mcp`, choose **fantasypros**, and sign in with your FantasyPros account.
