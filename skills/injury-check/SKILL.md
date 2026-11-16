@@ -8,7 +8,9 @@ Workflow for "is X playing?" and "what's the latest on X?". Answers come from th
 
 **Inputs:** the player(s) the user asks about.
 
-1. **Look them up.** You MUST call `injury_status` with every player's full first and last name in one call (expand shorthand like "CMC" from context).
+1. **Look them up.** You MUST call `injury_status` with every player in one call.
+   - If the user has a league, pass its `league_key` and each name as the user typed it, a bare surname included ("warren"). The tool resolves it against the league's rosters, the user's own team first, and reports who each name became in `name_corrections`. Never swap in the most famous player with that surname yourself.
+   - Without a league, use full first and last names (expand shorthand like "CMC" from context). If the result has `did_you_mean`, retry with the player the conversation points to, or ask.
    - Check `resolved_players` before answering: if it shows a different player than the user meant, or `ambiguous_names` is present, re-run with the right `player_id` and say which player you answered about.
 2. **Report what FantasyPros has.**
    - `practice_details` is the current injury report: give the designation and the practice participation it shows.
