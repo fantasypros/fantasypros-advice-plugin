@@ -35,5 +35,5 @@ Workflow for showing the user the trades Trade Finder finds, where both sides be
 
 ## Data sources
 - Rosters, rankings, league standings, and trade evaluations MUST come from the FantasyPros tools above. Do not web-search to check or supplement them, and never let a web result override them. Never infer which fantasy team owns a player from the web or from memory.
-- Say how current the data is when it matters: results carry `data_as_of` (date, season, week), and `injury_status` news items carry `published`.
+- Say how current the data is when it matters: results carry `data_as_of` (date, season, week, and that week's `nfl_week_dates`; "this week" is that week), and `injury_status` news items carry `published`.
 - For anything the tools do not cover (for example why a player's role changed), you MAY search the web: prefer fantasypros.com and the most recent sources, skip anything from a previous season, and say where the information came from and when it was published.

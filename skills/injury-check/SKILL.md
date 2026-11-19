@@ -25,5 +25,5 @@ Workflow for "is X playing?" and "what's the latest on X?". Answers come from th
 
 ## Data sources
 - Injury designations, practice reports, and FantasyPros news MUST come from the tools above and take precedence over anything on the web. Never let an older web report override a newer FantasyPros one.
-- Results carry `data_as_of` (date, season, week); news items carry `published`. Always tell the user how recent the information is.
+- Results carry `data_as_of` (date, season, week, and that week's `nfl_week_dates`; "this week" is that week); news items carry `published`. Always tell the user how recent the information is.
 - Web search is for gaps only: prefer fantasypros.com and the most recent sources, skip anything from a previous season, and say where the information came from and when it was published.

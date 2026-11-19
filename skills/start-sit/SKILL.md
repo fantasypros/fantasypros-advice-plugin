@@ -8,7 +8,7 @@ Workflow for weekly lineup decisions.
 
 **Inputs:** optionally the specific players or lineup slots in question.
 
-**Which week? Check this first.** `start_sit_assistant` always covers the league's *current* matchup week, which its result reports as `nfl_week`. A user can ask about a later week ("Week 6" while `nfl_week` is 5, e.g. on the Monday or Tuesday before the week rolls over, or when planning ahead). In that case:
+**Which week? Check this first.** "This week" is `data_as_of.nfl_week`, the week whose dates are in `nfl_week_dates`; fantasy weeks roll over on Tuesday, so on a Tuesday or Wednesday this week's games are still ahead. `start_sit_assistant` always covers the league's *current* matchup week, which its result reports as `nfl_week`. Treat a question as being about a later week only when the user names one ("Week 6" while `nfl_week` is 5, or "next week"); never infer a later week from today's date or the day of the week. For a later week:
 - You MUST say that the assistant's lineup is for the current week, and you MUST NOT present that week's results, scores, byes, or win odds as the later week's.
 - Build the later week's lineup from `get_projections` with `projection_type="weekly"`, `week` set to that week, and `fp_ids` set to the `player_id` values from the start/sit result. For byes, call `get_schedule_and_strength` with the teams of the players involved: each team's `bye_week` says whether it is off that week. If a team has no `bye_week`, say you could not confirm its bye; do not assume.
 - Injury news can be stale for a week that hasn't started. Say that the recommendation should be re-checked once that week's practice reports are out.
@@ -27,5 +27,5 @@ Workflow for weekly lineup decisions.
 
 ## Data sources
 - Rankings, projections, start/sit verdicts, injury designations, byes, and roster facts MUST come from the FantasyPros tools above. Do not web-search to check or supplement them, and never let a web result override them.
-- Say how current the data is when it matters: results carry `data_as_of` (date, season, week), and `injury_status` news items carry `published`.
+- Say how current the data is when it matters: results carry `data_as_of` (date, season, week, and that week's `nfl_week_dates`; "this week" is that week), and `injury_status` news items carry `published`.
 - For anything the tools do not cover (for example why a player's role changed), you MAY search the web: prefer fantasypros.com and the most recent sources, skip anything from a previous season, and say where the information came from and when it was published.
