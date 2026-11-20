@@ -1,13 +1,13 @@
-# FantasyPros AI plugin
+# FantasyPros: Fantasy Advice plugin
 
 Fantasy football advice from FantasyPros, inside your AI assistant. The plugin
 connects your assistant to the **FantasyPros MCP server**, which serves expert
 consensus rankings, projections, injury reports, depth charts, and your synced
-leagues. It also adds **skills**, step-by-step workflows that tell the
+leagues. It also adds **skills**: step-by-step workflows that tell the
 assistant which tools to call for common in-season questions.
 
-It works with Claude (Claude Code, the Claude apps, and claude.ai), Gemini CLI,
-and OpenAI Codex. ChatGPT and any other MCP client can connect to the server
+It works with Claude (Claude Code, the Claude apps, and claude.ai) and OpenAI
+Codex. ChatGPT and any other MCP client can connect to the server
 directly.
 
 ## What you need
@@ -16,7 +16,7 @@ directly.
   the server.
 - To get advice about your own team, a league synced at
   [fantasypros.com/sync](https://www.fantasypros.com/sync/).
-- Some tools depend on your FantasyPros plan. See
+- To use premium advice tools, a FantasyPros premium subscription. See
   [What tools are available in the FantasyPros MCP Server](https://support.fantasypros.com/hc/en-us/articles/55238312588571-What-tools-are-available-in-the-FantasyPros-MCP-Server).
 
 ## Install
@@ -24,8 +24,8 @@ directly.
 ### Claude Code
 
 ```
-/plugin marketplace add fantasypros/fantasypros-ai-plugin
-/plugin install fantasypros@fantasypros-ai-plugin
+/plugin marketplace add fantasypros/fantasypros-advice-plugin
+/plugin install fantasypros@fantasypros-advice-plugin
 ```
 
 Run `/mcp`, choose **fantasypros**, and sign in with your FantasyPros account.
@@ -33,21 +33,13 @@ Run `/mcp`, choose **fantasypros**, and sign in with your FantasyPros account.
 ### Claude apps and claude.ai
 
 Go to **Customize → Plugins**, add the marketplace
-`fantasypros/fantasypros-ai-plugin`, and install **FantasyPros**. Then open the
+`fantasypros/fantasypros-advice-plugin`, and install **FantasyPros**. Then open the
 plugin's **Connectors** tab and connect FantasyPros.
-
-### Gemini CLI
-
-```
-gemini extensions install https://github.com/fantasypros/fantasypros-ai-plugin
-```
-
-Start Gemini CLI and run `/mcp auth fantasypros` to sign in.
 
 ### OpenAI Codex
 
 ```
-codex plugin marketplace add fantasypros/fantasypros-ai-plugin
+codex plugin marketplace add fantasypros/fantasypros-advice-plugin
 ```
 
 Run `/plugins`, install **FantasyPros**, and sign in when prompted.
@@ -68,16 +60,16 @@ FantasyPros account. This path gives you the tools but not the skills below.
 | Skill | Use it for |
 | --- | --- |
 | `start-sit` | Weekly lineup calls: who to start, X or Y, setting your whole lineup |
-| `waiver-wire` | Pickups, who to drop, and whether a specific add/drop is worth it |
-| `trade-finder` | Trade ideas and targets that work for both sides |
+| `waiver-wire` | Pickups, who to drop, and how much a specific add/drop will help your team |
+| `trade-finder` | Trade ideas and targets that will improve your team and work for both sides |
 | `player-compare` | Comparing two to four players for this week or the rest of the season |
 | `injury-check` | A player's injury status, practice report, and latest news |
 
 Your assistant picks the right skill from your question. Try:
 
-- "Who should I start at FLEX this week?"
+- "Who should I start at FLEX?"
 - "Best waiver pickups for my team this week"
-- "Find me a trade to upgrade at RB"
+- "Find me a trade that upgrades me at RB"
 - "Is my running back playing this week?"
 
 ## How answers use FantasyPros data
@@ -92,7 +84,7 @@ prefers recent sources and says where the information came from.
 
 FantasyPros maintains this plugin in an internal repository, and each update
 there is copied here. Pull requests can't be merged directly, but please
-[open an issue](https://github.com/fantasypros/fantasypros-ai-plugin/issues)
+[open an issue](https://github.com/fantasypros/fantasypros-advice-plugin/issues)
 for bugs or suggestions.
 
 - [Privacy Policy](https://www.fantasypros.com/about/privacy/)

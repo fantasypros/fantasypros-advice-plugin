@@ -1,5 +1,5 @@
 {
-  "name": "fantasypros-ai-plugin",
+  "name": "fantasypros-advice-plugin",
   "interface": {
     "displayName": "FantasyPros"
   },

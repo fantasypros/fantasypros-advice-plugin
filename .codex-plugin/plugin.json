@@ -1,13 +1,13 @@
 {
   "name": "fantasypros",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "FantasyPros fantasy football data and in-season workflows: start/sit, waivers, trades, player comparisons, and injury checks.",
   "author": {
     "name": "FantasyPros",
     "url": "https://www.fantasypros.com/"
   },
   "homepage": "https://www.fantasypros.com/",
-  "repository": "https://github.com/fantasypros/fantasypros-ai-plugin",
+  "repository": "https://github.com/fantasypros/fantasypros-advice-plugin",
   "keywords": ["fantasy football", "nfl", "start sit", "waivers", "trades", "rankings"],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
