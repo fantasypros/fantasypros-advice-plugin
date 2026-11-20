@@ -1,9 +1,9 @@
-# FantasyPros AI plugin
+# FantasyPros: Fantasy Advice plugin
 
 Fantasy football advice from FantasyPros, inside your AI assistant. The plugin
 connects your assistant to the **FantasyPros MCP server**, which serves expert
 consensus rankings, projections, injury reports, depth charts, and your synced
-leagues. It also adds **skills**, step-by-step workflows that tell the
+leagues. It also adds **skills**: step-by-step workflows that tell the
 assistant which tools to call for common in-season questions.
 
 It works with Claude (Claude Code, the Claude apps, and claude.ai), Gemini CLI,
@@ -16,7 +16,7 @@ directly.
   the server.
 - To get advice about your own team, a league synced at
   [fantasypros.com/sync](https://www.fantasypros.com/sync/).
-- Some tools depend on your FantasyPros plan. See
+- To use premium advice tools, a FantasyPros premium subscription. See
   [What tools are available in the FantasyPros MCP Server](https://support.fantasypros.com/hc/en-us/articles/55238312588571-What-tools-are-available-in-the-FantasyPros-MCP-Server).
 
 ## Install
@@ -68,16 +68,16 @@ FantasyPros account. This path gives you the tools but not the skills below.
 | Skill | Use it for |
 | --- | --- |
 | `start-sit` | Weekly lineup calls: who to start, X or Y, setting your whole lineup |
-| `waiver-wire` | Pickups, who to drop, and whether a specific add/drop is worth it |
-| `trade-finder` | Trade ideas and targets that work for both sides |
+| `waiver-wire` | Pickups, who to drop, and how much a specific add/drop will help your team |
+| `trade-finder` | Trade ideas and targets that will improve your team and work for both sides |
 | `player-compare` | Comparing two to four players for this week or the rest of the season |
 | `injury-check` | A player's injury status, practice report, and latest news |
 
 Your assistant picks the right skill from your question. Try:
 
-- "Who should I start at FLEX this week?"
+- "Who should I start at FLEX?"
 - "Best waiver pickups for my team this week"
-- "Find me a trade to upgrade at RB"
+- "Find me a trade that upgrades me at RB"
 - "Is my running back playing this week?"
 
 ## How answers use FantasyPros data
